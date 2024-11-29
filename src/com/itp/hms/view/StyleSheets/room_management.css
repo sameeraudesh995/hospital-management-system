@@ -1,0 +1,155 @@
+/* General Styling for the Root Pane */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #00bbf9, #8338ec);
+    -fx-padding: 20px;
+}
+
+/* Top Header Styling */
+.hbox {
+    -fx-padding: 15px;
+    -fx-background-color: linear-gradient(to right, #3a86ff, #8338ec);
+    -fx-alignment: center;
+}
+
+.hbox .label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* VBox Styling for Forms and Tables */
+.vbox {
+    -fx-spacing: 20px;
+    -fx-padding: 20px;
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(to bottom, #8338ec, #FFFFFF);
+    -fx-border-radius: 8px;
+}
+
+/* Form Section Styling */
+.vbox > .grid-pane {
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-alignment: center-left;
+    -fx-border-color: #8338ec;
+    -fx-border-width: 2px;
+    -fx-background-color: linear-gradient(to right, #9b5de5, #8338ec);
+    -fx-background-radius: 8px;
+    -fx-padding: 20px;
+}
+
+/* Labels in the Form */
+.grid-pane .label {
+    -fx-text-fill: #457b9d;
+    -fx-font-weight: bold;
+}
+
+/* Text Fields and ComboBox Styling */
+.text-field,
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #457b9d;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+
+.text-field:focused,
+.combo-box:focused {
+    -fx-border-color: #3a86ff;
+    -fx-background-color: #f0f8ff;
+}
+
+/* Buttons Styling */
+.button {
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #485b9f, #4d64b3);
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+/* Specific Button Colors */
+#addButton {
+    -fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec);
+}
+
+#updateButton {
+    -fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec);
+}
+
+#removeButton {
+    -fx-background-color: linear-gradient(to bottom, #e63946, #9b2226);
+}
+
+#clearButton {
+    -fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec);
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-border-color: #457b9d;
+    -fx-border-width: 2px;
+    -fx-background-color: linear-gradient(to right, #f1faee, #e5e5e5);
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to right, #3a86ff, #8338ec);
+    -fx-text-fill: #ffff;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: linear-gradient(to right, #f39c12, #f1c40f);
+    -fx-text-fill: white;
+}
+
+/* Dynamic Room Buttons */
+.hbox .button {
+    -fx-background-color: #8ecae6;
+    -fx-text-fill: #457b9d;
+    -fx-pref-height: 80px;
+    -fx-pref-width: 100px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Navigation Button Styling */
+#backToHomeButton {
+    -fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec);
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 20px;
+}
+
+#backToHomeButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #4d64b3, #485b9f);
+}
+
+/* Icons in Buttons */
+.image-view {
+    -fx-fit-height: 24px;
+    -fx-fit-width: 24px;
+}
