@@ -1,11 +1,10 @@
-package com.itp.hms.controller;
+package com.itp.hms.controller.user;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class LoginFormController {
+public class UserLoginFormController {
     @FXML
     private TextField usernameField;
 
