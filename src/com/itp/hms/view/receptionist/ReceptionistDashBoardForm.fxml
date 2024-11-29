@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="1027.0" prefWidth="1200.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.receptionist.ReceptionistDashBoardFormController">
+
+    <children>
+        <!-- Greeting and Current Date & Time -->
+        <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="60.0" prefWidth="1160.0" spacing="30">
+            <Label fx:id="greetingLabel" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2a3d56;" text="Welcome, [Receptionist Name]!" />
+            <Label fx:id="dateTimeLabel" style="-fx-font-size: 16px; -fx-text-fill: #2a3d56;" text="Date and Time: [Current Date and Time]" />
+        </HBox>
+
+        <!-- Main Heading -->
+        <Label layoutX="20.0" layoutY="90.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2a3d56;" text="Client Registration and Appointment Management" />
+
+        <!-- Navigation Buttons -->
+        <HBox layoutX="20.0" layoutY="140.0" prefHeight="50.0" prefWidth="1160.0" spacing="15">
+            <Button style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px;" text="Client Management" />
+            <Button style="-fx-background-color: #2196f3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px;" text="Appointment" />
+            <Button style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px;" text="Consultant" />
+        </HBox>
+
+        <!-- Client Management Section -->
+        <VBox layoutX="20.0" layoutY="200.0" prefWidth="1160.0" spacing="20.0">
+            <HBox spacing="20">
+                <!-- Form Section -->
+                <GridPane hgap="15" maxWidth="600" style="-fx-padding: 20; -fx-background-color: white; -fx-border-color: #2a3d56; -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 10;" vgap="15">
+                    <!-- Client ID -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Client ID:" />
+                    <TextField fx:id="clientIdField" promptText="Enter Client ID" GridPane.columnIndex="1" />
+
+                    <!-- Client Name -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Client Name:" GridPane.rowIndex="1" />
+                    <TextField fx:id="clientNameField" promptText="Enter Full Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- Address -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Address:" GridPane.rowIndex="2" />
+                    <TextField fx:id="addressField" promptText="Enter Address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Contact -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Contact:" GridPane.rowIndex="3" />
+                    <TextField fx:id="contactField" promptText="Enter Contact Number" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <!-- Age -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Age:" GridPane.rowIndex="4" />
+                    <TextField fx:id="ageField" promptText="Enter Age" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Email -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Email:" GridPane.rowIndex="5" />
+                    <TextField fx:id="emailField" promptText="Enter Email Address" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <!-- Register Date -->
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="Register Date:" GridPane.rowIndex="6" />
+                    <DatePicker fx:id="registerDateField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <!-- Image Placeholder -->
+                <VBox alignment="CENTER" spacing="10">
+                    <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="807.0" style="-fx-border-color: #2a3d56; -fx-border-radius: 10;">
+                  <image>
+                     <Image url="@../../Images/recipDashPng1.png" />
+                  </image></ImageView>
+                    <Label style="-fx-font-size: 14px; -fx-text-fill: #333333;" text="City Hospital Client Registration" />
+                </VBox>
+            </HBox>
+
+            <!-- Buttons -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 100px;" text="Register" />
+                <Button style="-fx-background-color: #2196f3; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 100px;" text="Update" />
+                <Button style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 100px;" text="Delete" />
+                <Button style="-fx-background-color: #9e9e9e; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 100px;" text="Clear" />
+            </HBox>
+
+            <!-- TableView for Client Data -->
+            <TableView fx:id="clientTableView" style="-fx-border-color: #2a3d56; -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 10;">
+                <columns>
+                    <TableColumn fx:id="clientIdColumn" prefWidth="120" text="Client ID" />
+                    <TableColumn fx:id="clientNameColumn" prefWidth="180" text="Client Name" />
+                    <TableColumn fx:id="addressColumn" prefWidth="180" text="Address" />
+                    <TableColumn fx:id="contactColumn" prefWidth="120" text="Contact" />
+                    <TableColumn fx:id="ageColumn" prefWidth="60" text="Age" />
+                    <TableColumn fx:id="emailColumn" prefWidth="200" text="Email" />
+                    <TableColumn fx:id="registerDateColumn" prefWidth="180" text="Register Date" />
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>
