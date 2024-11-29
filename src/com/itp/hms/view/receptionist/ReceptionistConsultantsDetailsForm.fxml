@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="613.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to right, #8e9eab, #eef2f3);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.receptionist.ReceptionistConsultantsDetailsFormController">
+
+    <children>
+      <ImageView fitHeight="801.0" fitWidth="1200.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/Dna.png" />
+         </image>
+      </ImageView>
+        <!-- Greeting and Current Date & Time -->
+        <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="60.0" prefWidth="1160.0" spacing="30">
+            <Label fx:id="greetingLabel" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2a3d56;" text="Welcome, [Receptionist Name]!" />
+            <Label fx:id="dateTimeLabel" style="-fx-font-size: 16px; -fx-text-fill: #2a3d56;" text="Date and Time: [Current Date and Time]" />
+        </HBox>
+
+        <!-- Main Heading -->
+        <Label layoutX="20.0" layoutY="90.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2a3d56;" text="Consultant Details" />
+
+        <!-- Table Section -->
+        <VBox layoutX="20.0" layoutY="140.0" prefWidth="1160.0" spacing="20.0">
+            <!-- TableView -->
+            <TableView fx:id="consultantTableView" style="-fx-border-color: #2a3d56; -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 10; -fx-padding: 10;">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="100" text="ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="200" text="Name" />
+                    <TableColumn fx:id="empNumColumn" prefWidth="150" text="Employee Number" />
+                    <TableColumn fx:id="contactColumn" prefWidth="150" text="Contact" />
+                    <TableColumn fx:id="emailColumn" prefWidth="200" text="Email" />
+                    <TableColumn fx:id="specialAreaColumn" prefWidth="200" text="Special Area" />
+                </columns>
+            </TableView>
+
+            <!-- Buttons -->
+            <HBox alignment="CENTER" spacing="20">
+                <Button style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 150px;" text="Refresh Table" />
+                <Button style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 150px;" text="Back to Home" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>
