@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admission.AdmissionManagemetController">
+    <!-- Top Header Section -->
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #050C9C, #3572EF); -fx-padding: 15;">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Admission Management" />
+        </HBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #3ABEF9, #A7E6FF);" stylesheets="@../StyleSheets/admissionmanagement.css">
+            <children>
+                <!-- Unified GridPane for All Fields -->
+                <GridPane alignment="CENTER" hgap="10" style="-fx-padding: 20; -fx-background-color: white; -fx-border-color: #3572EF; -fx-border-width: 2; -fx-border-radius: 8;" vgap="15">
+                    <children>
+                        <!-- Admission Details -->
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #050C9C;" text="Admission ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="admissionIdField" promptText="Enter Admission ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #050C9C;" text="Admission Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <DatePicker fx:id="admissionDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #050C9C;" text="Discharge Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="dischargeDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #050C9C;" text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="statusComboBox" promptText="Select Status" style="-fx-background-color: linear-gradient(to bottom, #3ABEF9, #A7E6FF);" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Not Discharged" />
+                                    <String fx:value="Discharged" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <!-- Patient Details -->
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #050C9C;" text="Patient ID:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="patientIdComboBox" promptText="Select Patient ID" style="-fx-background-color: linear-gradient(to bottom, #3ABEF9, #A7E6FF);" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #050C9C;" text="Room Number:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="roomNumberComboBox" promptText="Select Room Number" style="-fx-background-color: linear-gradient(to bottom, #3ABEF9, #A7E6FF);" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="20" style="-fx-padding: 10;">
+                    <children>
+                        <Button fx:id="admitButton" style="-fx-background-color: linear-gradient(to bottom, #3572EF, #050C9C); -fx-text-fill: white;" text="Admit" />
+                        <Button fx:id="updateButton" style="-fx-background-color: linear-gradient(to bottom, #3572EF, #050C9C); -fx-text-fill: white;" text="Update" />
+                        <Button fx:id="deleteButton" style="-fx-background-color: linear-gradient(to bottom, #BF0603, #E63946); -fx-text-fill: white;" text="Delete" />
+                        <Button fx:id="clearButton" style="-fx-background-color: linear-gradient(to bottom, #3ABEF9, #3572EF); -fx-text-fill: white;" text="Clear" />
+                    </children>
+                </HBox>
+
+                <!-- Table View -->
+                <TableView fx:id="admissionTable" style="-fx-background-color: #FFFFFF; -fx-border-color: #3572EF; -fx-border-width: 1;" styleClass="table-view">
+                    <columns>
+                        <TableColumn text="Admission ID" />
+                        <TableColumn text="Admission Date" />
+                        <TableColumn text="Discharge Date" />
+                        <TableColumn text="Status" />
+                        <TableColumn text="Room Number" />
+                        <TableColumn text="Patient ID" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Bottom Navigation -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="15" style="-fx-padding: 15; -fx-background-color: linear-gradient(to right, #050C9C, #3572EF);">
+            <Button fx:id="backToHomeButton" style="-fx-background-color: linear-gradient(to bottom, #3ABEF9, #050C9C); -fx-text-fill: white;" text="Back to Home">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@../../Images/icons8-home-100.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>
