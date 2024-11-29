@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@../StyleSheets/admission.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.AdmissionController">
+    <!-- Top Header Section -->
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #ff7e5f, #feb47b); -fx-padding: 15;">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Admission Management" />
+        </HBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #90e0ef, #00b4d8);">
+         <children>
+            <HBox alignment="CENTER" spacing="20" style="-fx-padding: 10;">
+               <children>
+                  <Label fx:id="greetingLabel" style="-fx-font-size: 18px;" text="Welcome, User!" />
+                  <Label fx:id="dateTimeLabel" style="-fx-font-size: 18px;" text="Date: Time" />
+               </children>
+            </HBox>
+            <VBox spacing="10" style="-fx-padding: 20; -fx-border-color: #1b4965; -fx-border-width: 2; -fx-background-color: linear-gradient(to right, #ade8f4, #caf0f8);">
+               <children>
+                  <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Patient Management" />
+                  <GridPane alignment="CENTER_LEFT" hgap="10" vgap="10">
+                     <columnConstraints>
+                        <ColumnConstraints minWidth="150" />
+                        <ColumnConstraints minWidth="250" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                        <RowConstraints minHeight="30" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Patient ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="patientIdField" promptText="Enter Patient ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="nameField" promptText="Enter Full Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="addressField" promptText="Enter Address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Age:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="ageField" promptText="Enter Age" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Guardian's Name:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="guardianField" promptText="Enter Guardian's Name" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Contact:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="contactField" promptText="Enter Contact Number" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <TextField fx:id="emailField" promptText="Enter Email Address" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <HBox alignment="CENTER" spacing="10">
+                     <children>
+                        <Button fx:id="registerButton" style="-fx-background-color: linear-gradient(to bottom, #06d6a0, #028090);" text="Register" textFill="WHITE" />
+                        <Button fx:id="updateButton" style="-fx-background-color: linear-gradient(to bottom, #fc7a1e, #ff9500);" text="Update" textFill="WHITE" />
+                        <Button fx:id="deleteButton" style="-fx-background-color: linear-gradient(to bottom, #bf0603, #e63946);" text="Delete" textFill="WHITE" />
+                        <Button fx:id="clearButton" style="-fx-background-color: linear-gradient(to bottom, #485696, #35478c);" text="Clear" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="patientTable" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f8f9fa);">
+                     <columns>
+                        <TableColumn text="Patient ID" />
+                        <TableColumn text="Name" />
+                        <TableColumn text="Address" />
+                        <TableColumn text="Age" />
+                        <TableColumn text="Guardian's Name" />
+                        <TableColumn text="Contact" />
+                        <TableColumn text="Email" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+        </VBox>
+    </center>
+
+    <!-- Bottom Navigation -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 15; -fx-background-color: linear-gradient(to right, #00c9ff, #92fe9d);">
+            <Button fx:id="patientRegisterButton" graphicTextGap="10" style="-fx-background-color: linear-gradient(to right, #06d6a0, #028090);" text="Patient Register" textFill="WHITE">
+                <graphic>
+                    <ImageView fx:id="registerIcon" fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@../../Images/icons8-patient-64.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="admissionButton" graphicTextGap="10" style="-fx-background-color: linear-gradient(to right, #2176ff, #33d6ff);" text="Admission" textFill="WHITE">
+                <graphic>
+                    <ImageView fx:id="admissionIcon" fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@../../Images/icons8-admission-100.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="roomManagementButton" graphicTextGap="10" style="-fx-background-color: linear-gradient(to right, #f15bb5, #ff88d8);" text="Room Management" textFill="WHITE">
+                <graphic>
+                    <ImageView fx:id="roomIcon" fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@../../Images/icons8-hospital-bed-64.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="logoutButton" style="-fx-background-color: transparent;">
+                <graphic>
+                    <ImageView fx:id="logoutIcon" fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@../../Images/icons8-logout-100.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>
