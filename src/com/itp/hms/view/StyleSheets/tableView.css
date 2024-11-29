@@ -1,0 +1,73 @@
+/* General TableView Styling */
+.table-view {
+    -fx-background-color: #f4f4f4; /* Light background for the table */
+    -fx-border-color: #d1d1d1; /* Light border */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Header Styling */
+.table-view .column-header-background {
+    -fx-background-color: #2C3E50; /* Dark header background */
+}
+
+.table-view .column-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white; /* White text for header */
+    -fx-alignment: CENTER;
+}
+
+/* Row Styling */
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Light gray for odd rows */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #ffffff; /* White for even rows */
+}
+
+/* Hover Effect on Rows */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #d1e7fd; /* Light blue for hover */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+/* Cell Styling */
+.table-view .table-cell {
+    -fx-font-size: 13px;
+    -fx-padding: 5px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: #2C3E50;
+}
+
+/* Highlight Selection */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #3498DB; /* Blue for selected row */
+    -fx-text-fill: white; /* White text for selected row */
+}
+
+.table-view .table-cell:selected {
+    -fx-background-color: transparent; /* Keep cell selection transparent */
+}
+
+/* Vertical and Horizontal Scrollbar Styling */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: #ecf0f1;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #95a5a6;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #7f8c8d;
+}
