@@ -1,0 +1,211 @@
+
+
+.root {
+    /* Main background gradient */
+    -fx-background-color: linear-gradient(to bottom right,
+    #00bbf9,
+    #00f5d4,
+    #d6e5f3
+    );
+
+    -fx-padding: 20px;
+}
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+    -fx-border-color: white;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+    -fx-padding: 5px 10px;
+}
+
+.logout-button:hover {
+    -fx-background-color: rgba(255,255,255,0.2);
+}
+/* Soft drop shadow effect for containers */
+.grid-pane, .table-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+}
+
+/* Background and border for main containers */
+.grid-pane {
+    -fx-background-color: linear-gradient(to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(245, 249, 255, 0.9)
+    );
+    -fx-border-color: rgba(189, 195, 199, 0.3);
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* Refined Button Styles */
+.button {
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    -fx-transition: -fx-background-color 0.3s ease;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Action Buttons */
+.add-button {
+    -fx-background-color: linear-gradient(to right, #2ecc71, #27ae60);
+}
+
+.update-button {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);
+}
+
+.clear-button {
+    -fx-background-color: linear-gradient(to right, #95a5a6, #7f8c8d);
+}
+
+.delete-button {
+    -fx-background-color: linear-gradient(to right, #e74c3c, #c0392b);
+}
+
+/* Text Fields and Combo Boxes */
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: rgba(189, 195, 199, 0.5);
+    -fx-border-radius: 5px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #3498db;
+    -fx-background-color: #f0f8ff;
+}
+
+/* Date Picker Styling */
+.date-picker {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: rgba(189, 195, 199, 0.5);
+    -fx-border-radius: 5px;
+}
+
+/* Table View Enhancements */
+.table-view {
+    -fx-background-color: linear-gradient(to right, #FFFFFF, #00bbf9);
+    -fx-background-radius: 8px;
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to right, #00bbf9, #FFFFFF);
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: linear-gradient(to right, #f39c12, #f1c40f);
+}
+
+/* Scrollbar Styling */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(189, 195, 199, 0.5);
+    -fx-background-radius: 10px;
+}
+
+/* Label Styling */
+.label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.grid-pane{
+    -fx-padding: 15px;
+    -fx-background-color: linear-gradient(to right, #FFFFFF, #00bbf9);
+}
+
+/* Responsive Sizing */
+.grid-pane .text-field,
+.grid-pane .combo-box,
+.grid-pane .date-picker {
+
+    -fx-pref-height: 35px;
+
+}
+
+/* Subtle Animations */
+.button, .text-field, .combo-box {
+    -fx-transition: all 0.2s ease;
+}
+
+
+/* Table View Padding */
+.table-view {
+    -fx-padding: 10px;
+}
+
+.table-view .column-header {
+    -fx-padding: 10px;
+}
+
+
+
+/* Table Row Padding */
+.table-view .table-row-cell {
+    -fx-padding: 5px;
+}
+
+/* Button Padding */
+.button {
+    -fx-padding: 8px 15px;
+}
+
+/* Text Field and Combo Box Padding */
+.text-field, .combo-box {
+    -fx-padding: 5px 10px;
+}
+
+/* Label Padding */
+.label {
+    -fx-padding: 5px;
+}
+
+/* Search Button Gradient */
+.search-button {
+    -fx-background-color: linear-gradient(to right,
+    #4a90e2,    /* Bright, vibrant blue */
+    #5c6bc0     /* Slightly deeper blue-indigo */
+    );
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    -fx-transition: -fx-background-color 0.3s ease;
+}
+
+.search-button:hover {
+    -fx-background-color: linear-gradient(to right,
+    #4a90e2,    /* Slightly modified hover state */
+    #4d64b3     /* Darker shade on hover */
+    );
+    -fx-opacity: 0.9;
+}
+
+.search-button:pressed {
+    -fx-background-color: linear-gradient(to right,
+    #4d64b3,    /* Darker shade when pressed */
+    #485b9f
+    );
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
