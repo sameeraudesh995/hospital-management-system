@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@../StyleSheets/admissionDashBoard.css" xmlns:fa="http://de.jensd.fx.glyphs.fontawesome" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admin.AdminDashBoardController">
+
+    <!-- Top Section with Gradient -->
+    <top>
+        <HBox style="-fx-background-color: linear-gradient(to right, #1e3c72, #2a5298); -fx-padding: 10; -fx-alignment: center-left;">
+            <Label style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;" text="Admin Dashboard" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="greetingLabel" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Welcome, Admin" />
+            <Label fx:id="dateTimeLabel" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 0 0 0 20;" text="Date And Time" />
+        </HBox>
+    </top>
+
+    <!-- Left Navigation Menu with Gradient -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e); -fx-padding: 10;" BorderPane.alignment="CENTER">
+            <children>
+                <Button style="-fx-background-color: linear-gradient(to right, #16a085, #1abc9c); -fx-text-fill: white; -fx-background-radius: 5;" text="User Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #2980b9, #3498db); -fx-text-fill: white; -fx-background-radius: 5;" text="Consultant Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_MD" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #8e44ad, #9b59b6); -fx-text-fill: white; -fx-background-radius: 5;" text="Pharmacy Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PILLS" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #d35400, #e67e22); -fx-text-fill: white; -fx-background-radius: 5;" text="Laboratory Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FLASK" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #c0392b, #e74c3c); -fx-text-fill: white; -fx-background-radius: 5;" text="Activity Log">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #27ae60, #2ecc71); -fx-text-fill: white; -fx-background-radius: 5;" text="Inventory Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOXES" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #f39c12, #f1c40f); -fx-text-fill: white; -fx-background-radius: 5;" text="Receptionist Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HEADSET" />
+                    </graphic>
+                </Button>
+                <Button style="-fx-background-color: linear-gradient(to right, #2c3e50, #34495e); -fx-text-fill: white; -fx-background-radius: 5;" text="Admission Management">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BED" />
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- Center Section -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom right, #f0f4f8, #e9f0f7);">
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="User Management" />
+
+            <!-- User Information Form with Soft Gradient -->
+            <GridPane hgap="15" styleClass="grid-pane" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="150" />
+                    <ColumnConstraints minWidth="250" />
+                </columnConstraints>
+
+                <!-- Row 1 -->
+                <Label text="User ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="userIdField" promptText="Enter User ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <!-- Row 2 -->
+                <Label text="Employee Number:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="empNumField" promptText="Enter Employee Number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- Row 3 -->
+                <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="roleField" promptText="Enter Role" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <!-- Row 4 -->
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="emailField" promptText="Enter Email" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <!-- Row 5 -->
+                <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="nameField" promptText="Enter Name" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <!-- Row 6 -->
+                <Label text="Contact:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <TextField fx:id="contactField" promptText="Enter Contact" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <!-- Row 7 -->
+                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <PasswordField fx:id="passwordField" promptText="Enter Password" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <!-- Row 8 -->
+                <Label text="Join Date:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <DatePicker fx:id="joinDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <!-- Action Buttons with Gradient -->
+            <HBox spacing="10" style="-fx-alignment: center;">
+                <Button fx:id="addButton" style="-fx-background-color: linear-gradient(to right, #27ae60, #2ecc71); -fx-text-fill: white; -fx-background-radius: 5;" text="Add" />
+                <Button fx:id="updateButton" style="-fx-background-color: linear-gradient(to right, #f39c12, #f1c40f); -fx-text-fill: white; -fx-background-radius: 5;" text="Update" />
+                <Button fx:id="deleteButton" style="-fx-background-color: linear-gradient(to right, #c0392b, #e74c3c); -fx-text-fill: white; -fx-background-radius: 5;" text="Delete" />
+                <Button fx:id="clearButton" style="-fx-background-color: linear-gradient(to right, #7f8c8d, #95a5a6); -fx-text-fill: white; -fx-background-radius: 5;" text="Clear" />
+            </HBox>
+
+            <!-- Table View with Subtle Gradient -->
+            <TableView fx:id="userTable" styleClass="table-view scroll-bar">
+                <columns>
+                    <TableColumn fx:id="userIdColumn" text="User ID" />
+                    <TableColumn fx:id="empNumColumn" text="Employee Number" />
+                    <TableColumn fx:id="roleColumn" text="Role" />
+                    <TableColumn fx:id="emailColumn" text="Email" />
+                    <TableColumn fx:id="nameColumn" text="Name" />
+                    <TableColumn fx:id="contactColumn" text="Contact" />
+                    <TableColumn fx:id="joinDateColumn" text="Join Date" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
