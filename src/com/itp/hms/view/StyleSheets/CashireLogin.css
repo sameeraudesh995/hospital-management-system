@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: #eaf2f8; /* Light blue background */
+    -fx-padding: 20;
+}
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Darker text color */
+    -fx-padding: 10;
+}
+
+.button {
+    -fx-background-color: #2980b9; /* Button color */
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: #3498db; /* Lighter button color on hover */
+}
+
+.hyperlink {
+    -fx-text-fill: #2980b9; /* Link color */
+    -fx-font-weight: bold;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #3498db; /* Lighter link color on hover */
+}
