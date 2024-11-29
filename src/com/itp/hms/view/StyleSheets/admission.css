@@ -1,0 +1,37 @@
+/* Action Buttons */
+.action-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+}
+
+.action-button:hover {
+    -fx-background-color: #1976D2;
+}
+
+/* Table Header */
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #74ebd5, #acb6e5);
+    -fx-border-color: lightgray;
+    -fx-border-width: 0 0 1px 0;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+/* Navigation Buttons */
+.nav-button {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+}
+
+.nav-button:hover {
+    -fx-background-color: #F57C00;
+}
