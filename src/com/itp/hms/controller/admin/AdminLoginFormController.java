@@ -1,4 +1,4 @@
-package com.itp.hms.controller;
+package com.itp.hms.controller.admin;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
