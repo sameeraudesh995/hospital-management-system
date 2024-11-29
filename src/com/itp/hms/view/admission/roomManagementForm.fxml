@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="root" stylesheets="@../StyleSheets/room_management.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admission.RoomManagementController">
+    <!-- Top Header Section -->
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #3a86ff, #8338ec); -fx-padding: 15;">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Room Management" />
+        </HBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #8338ec, #FFFFFF);">
+            <children>
+                <!-- Room Details Form -->
+                <VBox spacing="10" style="-fx-padding: 20; -fx-border-color: #8338ec; -fx-border-width: 2; -fx-background-color: linear-gradient(to right, #FFFFFF, #8338ec); -fx-background-radius: 8px; -fx-border-radius: 8px;">
+                    <children>
+                        <GridPane alignment="CENTER_LEFT" hgap="10" vgap="10">
+                            <columnConstraints>
+                                <ColumnConstraints minWidth="150" />
+                                <ColumnConstraints minWidth="250" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="30" />
+                                <RowConstraints minHeight="30" />
+                                <RowConstraints minHeight="30" />
+                            </rowConstraints>
+                            <children>
+                                <Label style="-fx-text-fill: #8338ec; -fx-font-weight: 800;" text="Room ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <TextField fx:id="roomIdField" promptText="Enter Room ID" style="-fx-border-color: #8338ec;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label style="-fx-text-fill: #8338ec; -fx-font-weight: 800;" text="Bed Count:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <TextField fx:id="bedCountField" promptText="Enter Bed Count" style="-fx-border-color: #8338ec;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label style="-fx-text-fill: #8338ec; -fx-font-weight: 800;" text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="statusComboBox" promptText="Select Status" style="-fx-border-color: #8338ec;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Available" />
+                                            <String fx:value="Occupied" />
+                                            <String fx:value="Maintenance" />
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                            </children>
+                        </GridPane>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Button fx:id="addButton" style="-fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec); -fx-text-fill: #FFFFFF;" text="Add" />
+                                <Button fx:id="updateButton" style="-fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec); -fx-text-fill: #FFFFFF;" text="Update" />
+                                <Button fx:id="removeButton" style="-fx-background-color: linear-gradient(to bottom, #e63946, #9b2226); -fx-text-fill: #FFFFFF;" text="Remove" />
+                                <Button fx:id="clearButton" style="-fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec); -fx-text-fill: #FFFFFF;" text="Clear" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <!-- Table View -->
+                <TableView fx:id="roomTable" style="-fx-border-color: #8338ec; -fx-border-width: 2; -fx-background-color: linear-gradient(to bottom, #8338ec, #FFFFFF); -fx-border-radius: 0;">
+                    <columns>
+                        <TableColumn text="Room ID" />
+                        <TableColumn text="Bed Count" />
+                        <TableColumn text="Status" />
+                    </columns>
+                </TableView>
+
+                <!-- Graphical Room Representation -->
+                <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+                    <children>
+                        <!-- Dynamic Buttons for Rooms -->
+                        <Button prefHeight="80" prefWidth="100" style="-fx-background-color: linear-gradient(to bottom, #00bbf9, #8338ec)linear-gradient(to bottom, #00bbf9, #8338ec); -fx-text-fill: #ffff;" text="Room 1\nBeds: 2" />
+                        <Button prefHeight="80" prefWidth="100" style="-fx-background-color: linear-gradient(to bottom, #00bbf9, #8338ec)linear-gradient(to bottom, #00bbf9, #8338ec); -fx-text-fill: #ffff;" text="Room 2\nBeds: 3" />
+                        <Button prefHeight="80" prefWidth="100" style="-fx-background-color: linear-gradient(to bottom, #00bbf9, #8338ec)linear-gradient(to bottom, #00bbf9, #8338ec); -fx-text-fill: #ffff;" text="Room 3\nBeds: 4" />
+                        <!-- Add more buttons as needed for other rooms -->
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Bottom Navigation -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 15; -fx-background-color: linear-gradient(to right, #3a86ff, #8338ec);">
+            <Button fx:id="backToHomeButton" style="-fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec); -fx-text-fill: #FFFFFF;" text="Home">
+                <graphic>
+                    <ImageView fx:id="homeIcon" fitHeight="24" fitWidth="24">
+                        <image>
+                            <Image url="@../../Images/icons8-home-100.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>
