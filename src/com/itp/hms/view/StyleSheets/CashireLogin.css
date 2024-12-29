@@ -1,31 +1,103 @@
+/* Root Pane for Login Form */
 .root {
-    -fx-background-color: #eaf2f8; /* Light blue background */
-    -fx-padding: 20;
+    -fx-background-color: linear-gradient(to bottom, #00bbf9, #8338ec);
+    -fx-padding: 20px;
+    -fx-alignment: center;
 }
 
-.welcome-text {
+/* Login Form Container */
+.login-container {
+    -fx-background-color: linear-gradient(to bottom, #8338ec, #ffffff);
+    -fx-border-radius: 10px;
+    -fx-padding: 30px 40px;
+    -fx-spacing: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(131, 56, 236, 0.3), 10, 0.5, 0, 5);
+    -fx-max-width: 400px;
+    -fx-alignment: center;
+}
+
+/* Login Form Header */
+.login-container .header-label {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50; /* Darker text color */
-    -fx-padding: 10;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 2, 0.4, 0, 1);
 }
 
-.button {
-    -fx-background-color: #2980b9; /* Button color */
-    -fx-text-fill: white;
-    -fx-padding: 10 20;
+/* Input Fields */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #457b9d;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
     -fx-font-size: 14px;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+}
+
+.text-field:focused {
+    -fx-border-color: #3a86ff;
+    -fx-background-color: #f0f8ff;
+}
+
+/* Buttons */
+.button {
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 1);
+    -fx-transition: all 0.3s ease;
 }
 
 .button:hover {
-    -fx-background-color: #3498db; /* Lighter button color on hover */
+    -fx-opacity: 0.9;
 }
 
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #485b9f, #4d64b3);
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+/* Specific Button Styles */
+#loginButton {
+    -fx-background-color: linear-gradient(to bottom, #3a86ff, #8338ec);
+}
+
+#clearButton {
+    -fx-background-color: linear-gradient(to bottom, #ffb703, #f77f00);
+}
+
+#clearButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #f77f00, #d62828);
+}
+
+/* Hyperlinks */
 .hyperlink {
-    -fx-text-fill: #2980b9; /* Link color */
+    -fx-text-fill: #3a86ff;
     -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-font-size: 14px;
 }
 
 .hyperlink:hover {
-    -fx-text-fill: #3498db; /* Lighter link color on hover */
+    -fx-text-fill: #8338ec;
+    -fx-cursor: hand;
+}
+
+/* Icon Styling */
+.image-view {
+    -fx-fit-height: 60px;
+    -fx-fit-width: 60px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.5, 0, 1);
+    -fx-margin: 10px 0;
+}
+
+/* Error/Info Label */
+.info-label {
+    -fx-text-fill: #e63946;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
 }

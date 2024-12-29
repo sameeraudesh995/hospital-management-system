@@ -1,11 +1,22 @@
 package com.itp.hms.controller.admin;
+import com.itp.hms.other.SetUIHandle;
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
-    public class AdminLoginFormController {
+import java.io.IOException;
+
+public class AdminLoginFormController {
 
         @FXML
         private TextField adminIdField;
@@ -21,6 +32,11 @@ import javafx.scene.control.PasswordField;
 
         @FXML
         private TextField emailField;
+
+        @FXML
+        private BorderPane context;
+
+        SetUIHandle set=new SetUIHandle();
 
         // Handle Register Button Action
         @FXML
@@ -59,6 +75,22 @@ import javafx.scene.control.PasswordField;
             contactNumberField.clear();
             emailField.clear();
         }
+
+        public void handleLogin(ActionEvent actionEvent) {
+        }
+
+        public void handleRegister(ActionEvent actionEvent) {
+        }
+
+
+    public void handleGoBackToHome(ActionEvent actionEvent) {
+        try {
+            set.setUiMain(context,"MainForm");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
+}
 
 

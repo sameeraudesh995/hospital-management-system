@@ -1,0 +1,14 @@
+
+]	java:S125_"<This block of commented-out lines of code should be removed.(¹˜˜Êşÿÿÿÿ8¸¯­Á·2
+L	java:S106"+Replace this use of System.out by a logger.(©Š·…ùÿÿÿÿ8°²¨Á·2
+H	java:S106Š"+Replace this use of System.out by a logger.(¬¨ÌÏ8Ç²¨Á·2
+9
+java:S3626¤"Remove this redundant jump.(ûÁİ…8Ù»°Á·2
+Y	java:S125"<This block of commented-out lines of code should be removed.(ËÀ™Ö8®¯Á·2
+^	java:S125§"<This block of commented-out lines of code should be removed.(ÿº³¾ıÿÿÿÿ8Ş»°Á·2
+M	java:S106¼"+Replace this use of System.out by a logger.(ˆòÌŒıÿÿÿÿ8ê³¨Á·2
+M	java:S106Â"+Replace this use of System.out by a logger.(äò”úÿÿÿÿ8ò³¨Á·2
+\
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8›˜ÇÁ·2
+U
+java:S1144Æ"2Remove this unused private "validateInput" method.(ë•öùÿÿÿÿ8İŸ¯Á·2

@@ -1,0 +1,98 @@
+/* Root and Background Styling */
+.root {
+    -fx-background-color: #1c1c1c; /* Matte black background */
+    -fx-padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    -fx-background-color: #2c2c2c; /* Slightly lighter black background for form */
+    -fx-border-color: #4d4d4d; /* Dark grey border */
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 0, 2);
+    -fx-padding: 20px; /* Add padding around the form container */
+    -fx-spacing: 15px; /* Add spacing between elements */
+}
+
+/* Header Label */
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-margin-bottom: 15px; /* Add margin for space below header */
+}
+
+/* General Label Styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Text Field and Password Field */
+.text-field {
+    -fx-background-color: #333333; /* Dark background for input fields */
+    -fx-border-color: #5c5c5c; /* Lighter border for text fields */
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-padding: 10px 15px; /* Add padding inside text fields */
+    -fx-font-size: 14px; /* Adjust font size */
+    -fx-margin-bottom: 10px; /* Add space below each field */
+}
+
+/* Focused State for Text Fields */
+.text-field:focused {
+    -fx-border-color: #1f7a1f; /* Green border when focused */
+    -fx-background-color: #555555;
+}
+
+/* Buttons Styling */
+.button {
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+/* Primary Button (Register) */
+.primary-button {
+
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #333333);
+}
+
+/* Secondary Button (Clear) */
+.secondary-button {
+    -fx-background-color: linear-gradient(to bottom,#ff9e00, #333333) ; /* Orange background for clear */
+}
+
+/* Button Hover Effect */
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Button Pressed Effect */
+.button:pressed {
+    -fx-background-color: #3e8e41; /* Slightly darker green on press for register */
+}
+
+/* Button Clear Pressed */
+.secondary-button:pressed {
+    -fx-background-color: #e07b00; /* Slightly darker orange on press for clear */
+}
+
+/* Hyperlink Styling */
+.hyperlink {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bbb; /* Light grey color */
+    -fx-font-weight: bold;
+}
+
+/* Hyperlink Hover */
+.hyperlink:hover {
+    -fx-text-fill: white;
+}

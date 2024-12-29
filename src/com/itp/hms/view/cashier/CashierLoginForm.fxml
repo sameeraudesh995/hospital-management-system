@@ -5,28 +5,47 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane styleClass="root" stylesheets="@../StyleSheets/CashireLogin.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.itp.hms.controller.cashier.CashierLoginForm">
+<BorderPane fx:id="context" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../StyleSheets/UserRegister.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox alignment="CENTER" prefWidth="400.0" spacing="20" styleClass="form-container">
+            <!-- Logo -->
+            <ImageView fitHeight="100.0" fitWidth="100.0" styleClass="image-view">
+                <image>
+                    <Image url="@../../Images/icons8-cashier-100.png" />
+                </image>
+            </ImageView>
 
-    <ImageView fx:id="logoImage" fitHeight="100" fitWidth="100" layoutX="100" layoutY="20" pickOnBounds="true" preserveRatio="true" />
+            <!-- Title -->
+            <Label styleClass="header-label" text="Cashier Login" />
 
-    <Text layoutX="50" layoutY="130" styleClass="welcome-text" text="Welcome to the Hospital Management System" />
+            <!-- Username Field -->
+            <VBox alignment="CENTER" spacing="5">
 
-    <Label layoutX="50" layoutY="170" text="Username:" />
-    <TextField fx:id="usernameField" layoutX="150" layoutY="170" style="-fx-pref-width: 200 " />
+                <TextField prefWidth="300.0" promptText="Enter your username" styleClass="text-field" />
+            </VBox>
 
-    <Label layoutX="50" layoutY="210" text="Password:" />
-    <PasswordField fx:id="passwordField" layoutX="150" layoutY="210" style="-fx-pref-width: 200 " />
+            <!-- Password Field -->
+            <VBox alignment="CENTER" spacing="5">
+                <PasswordField prefWidth="300.0" promptText="Enter your password" styleClass="text-field" />
+            </VBox>
 
-    <HBox layoutX="150" layoutY="250" spacing="10">
-        <Button onAction="#handleSubmitButtonAction" text="Sign In" />
-        <Button onAction="#handleClearButtonAction" text="Clear" />
-    </HBox>
+            <!-- Buttons -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="loginButton" styleClass="button, primary-button" text="Login" />
+                <Button fx:id="clearButton" styleClass="button, secondary-button" text="Clear" />
+            </HBox>
 
-    <Text fx:id="actiontarget" layoutX="150" layoutY="300" />
-    <Hyperlink layoutX="150" layoutY="320" onAction="#handleSignUpAction" text="Sign Up" />
-</AnchorPane>
+            <!-- Hyperlinks -->
+            <VBox alignment="CENTER" spacing="10">
+                <Hyperlink styleClass="hyperlink" text="Forgot Password?" />
+                <Hyperlink onAction="#backToHomeSetOnAction" styleClass="hyperlink" text="Back to home" />
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

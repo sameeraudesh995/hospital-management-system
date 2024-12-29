@@ -4,48 +4,39 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="429.0" prefWidth="617.0" style="-fx-background-color: linear-gradient(to bottom, #e8f5fe, #f1ffff);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.user.UserLoginFormController">
-    <children>
-      <ImageView fitHeight="429.0" fitWidth="617.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../Images/Dna.png" />
-         </image>
-      </ImageView>
-        <VBox alignment="CENTER" layoutX="159.0" layoutY="49.0" prefHeight="379.0" prefWidth="300.0" spacing="20.0">
+<BorderPane prefHeight="429.0" prefWidth="617.0" stylesheets="@../StyleSheets/UserRegister.css" styleClass="root" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.user.UserLoginFormController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" styleClass="form-container" BorderPane.alignment="CENTER">
             <!-- Title -->
-            <Label prefWidth="282.0" text="Hospital Management System" textFill="#0747a6">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Label>
+            <Label styleClass="header-label" text="Hospital Management System" />
+
             <VBox spacing="10.0">
                 <!-- Username Field -->
-                <Label text="Username" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="usernameField" promptText="Enter your username" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
+                <Label styleClass="label" text="Username" />
+                <TextField fx:id="usernameField" styleClass="text-field" promptText="Enter your username" />
+
                 <!-- Password Field -->
-                <Label text="Password" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <PasswordField fx:id="passwordField" promptText="Enter your password" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
+                <Label styleClass="label" text="Password" />
+                <PasswordField fx:id="passwordField" styleClass="text-field" promptText="Enter your password" />
             </VBox>
-            <!-- Login Button -->
-            <Button fx:id="loginButton" style="-fx-background-color: #0747a6; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-font-size: 14;" text="Login" />
-            <!-- Register Button -->
-            <Button fx:id="registerButton" layoutY="250" onAction="#handleRegisterButtonAction" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-font-size: 14;" text="Register" />
+
+            <!-- Buttons in Same Line -->
+            <HBox spacing="20.0" alignment="CENTER">
+                <!-- Login Button -->
+                <Button fx:id="loginButton" text="Login" styleClass="button,primary-button" />
+
+                <!-- Register Button -->
+                <Button fx:id="registerButton" text="Register" styleClass="button,secondary-button" onAction="#handleRegisterButtonAction" />
+            </HBox>
+
             <!-- Forgot Password Link -->
-            <Label style="-fx-cursor: hand;" text="Forgot Password?" textFill="#0747a6" />
+            <Label text="Forgot Password?" styleClass="hyperlink" />
+            <Label text="Back to Home" styleClass="hyperlink" onMouseClicked="#handleBackToHomeAction" BorderPane.alignment="TOP_LEFT" />
         </VBox>
-    </children>
-</AnchorPane>
+    </center>
+</BorderPane>

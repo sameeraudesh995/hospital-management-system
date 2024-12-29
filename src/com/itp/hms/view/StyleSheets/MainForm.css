@@ -1,0 +1,101 @@
+
+.root-pane {
+    -fx-background-color:linear-gradient(to bottom, #00b4d8, #90e0ef);
+    -fx-font-family: "Roboto", "Segoe UI", sans-serif;
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffff;
+}
+
+/* Top banner */
+.top-banner {
+    -fx-background-color:  linear-gradient(to right, #6a11cb, #2575fc);
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.main-title {
+    -fx-font-size: 36px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.date-time-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 0.9;
+}
+
+/* Navigation Grid */
+.navigation-grid {
+    -fx-background-color:linear-gradient(to bottom, #00b4d8, #90e0ef);
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.3, 0, 5);
+    -fx-padding: 20;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    -fx-background-color: linear-gradient(to right, #6a11cb, #2575fc);
+    -fx-text-fill: #ffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25px;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.3, 0, 5);
+    -fx-border-width: 2px;
+    -fx-border-color: transparent;
+    -fx-transition: 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    -fx-background-color: linear-gradient(to right, #2575fc, #6a11cb);
+    /*-fx-border-color: #ff7eb3;*/
+    -fx-transform: scale(1.05);
+}
+
+.nav-button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.1, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Images inside buttons */
+.nav-button .graphic {
+    -fx-opacity: 0.8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 3);
+}
+
+.nav-button:hover .graphic {
+    -fx-opacity: 1.0;
+}
+
+/* Bottom section */
+.bottom-section {
+    -fx-background-color: linear-gradient(to right, #43cea2, #185a9d);
+    -fx-padding: 10;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+.exit-button {
+    -fx-background-color: #ff7eb3;
+    -fx-text-fill: #ffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15px;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.3, 0, 5);
+}
+
+.exit-button:hover {
+    -fx-background-color: linear-gradient(to right, #ff7eb3, #ff4b2b);
+}
+
+.exit-button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.1, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}

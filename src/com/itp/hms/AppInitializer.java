@@ -6,13 +6,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class AppInitializer extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("./view/cashier/PaymentManagemet.fxml"));
-        primaryStage.setTitle("Treatment Management");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+    public void start(Stage primaryStage) {
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("./view/MainForm.fxml"));
+            primaryStage.setScene(new Scene(root));
+            primaryStage.setTitle("Main Form");
+            primaryStage.show();
+        }catch (IOException e){
+            System.out.println(e);
+        }
+
     }
 
     public static void main(String[] args) {

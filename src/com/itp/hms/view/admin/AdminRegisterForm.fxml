@@ -10,73 +10,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #bbd0ff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admin.AdminRegisterFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@../StyleSheets/AdminRegister.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admin.AdminRegisterFormController">
 
     <children>
-      <ImageView fitHeight="629.0" fitWidth="600.0" layoutY="7.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Images/—Pngtree—blue%20gene%20abstract%20dna_5809940.png" />
-         </image>
-      </ImageView>
-        <VBox alignment="CENTER" layoutX="150.0" layoutY="50.0" prefHeight="543.0" prefWidth="300.0" spacing="20.0">
-            <Label text="Admin Registration" textFill="#0747a6">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Label>
+        <ImageView fitHeight="630.0" fitWidth="602.0" layoutY="7.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../Images/Dna.png" />
+            </image>
+        </ImageView>
+
+        <VBox alignment="CENTER" layoutX="170.0" layoutY="50.0" prefHeight="543.0" prefWidth="300.0" spacing="20.0" styleClass="form-container">
+            <Label styleClass="header-label" text="Admin Registration" />
+
             <VBox spacing="15.0">
                 <!-- Admin ID -->
-                <Label text="Admin ID" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="adminIdField" promptText="Enter Admin ID" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
+                <Label styleClass="label" text="Admin ID" />
+                <TextField fx:id="adminIdField" promptText="Enter Admin ID" styleClass="text-field" />
 
                 <!-- Name -->
-                <Label text="Name" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="nameField" promptText="Enter Name" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
+                <Label styleClass="label" text="Name" />
+                <TextField fx:id="nameField" promptText="Enter Name" styleClass="text-field" />
 
                 <!-- Password -->
-                <Label text="Password" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <PasswordField fx:id="passwordField" promptText="Enter Password" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
+                <Label styleClass="label" text="Password" />
+                <PasswordField fx:id="passwordField" promptText="Enter Password" styleClass="text-field" />
 
                 <!-- Contact Number -->
-                <Label text="Contact Number" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="contactNumberField" promptText="Enter Contact Number" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
+                <Label styleClass="label" text="Contact Number" />
+                <TextField fx:id="contactNumberField" promptText="Enter Contact Number" styleClass="text-field" />
 
                 <!-- Email -->
-                <Label text="Email" textFill="#444">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="emailField" promptText="Enter Email" style="-fx-background-radius: 10; -fx-border-color: #ddd; -fx-padding: 8;" />
-            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="300.0">
-               <children>
-                  <ButtonBar prefHeight="64.0" prefWidth="298.0">
-                    <buttons>
-                           <!-- Submit Button -->
-                           <Button fx:id="registerButton" onAction="#handleRegisterButtonAction" style="-fx-background-color: #0747a6; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10;" text="Register" />
-                        <Button fx:id="registerButton1" onAction="#handleRegisterButtonAction" style="-fx-background-color: #ff9e00; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10; -fx-alignment: center;" text="Clear" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
-                    </buttons>
-                  </ButtonBar>
-               </children>
-            </HBox>
+                <Label styleClass="label" text="Email" />
+                <TextField fx:id="emailField" promptText="Enter Email" styleClass="text-field" />
+
+                <HBox alignment="CENTER" prefHeight="64.0" prefWidth="300.0">
+                    <children>
+                        <ButtonBar prefHeight="64.0" prefWidth="298.0">
+                            <buttons>
+                                <!-- Submit Button -->
+                                <Button fx:id="registerButton" onAction="#handleRegisterButtonAction" style="-fx-background-color: linear-gradient(to bottom, #4CAF50, #333333);" styleClass="button primary-button" text="Register" />
+
+                                <!-- Clear Button -->
+                                <Button fx:id="registerButton1" onAction="#handleRegisterButtonAction" style="-fx-background-color: linear-gradient(to bottom,#ff9e00, #333333);" styleClass="button secondary-button" text="Clear" />
+                            </buttons>
+                        </ButtonBar>
+                    </children>
+                </HBox>
             </VBox>
         </VBox>
     </children>

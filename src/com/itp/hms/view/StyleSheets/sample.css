@@ -1,0 +1,33 @@
+/* Background Gradient */
+context {
+    -fx-background-color: linear-gradient(to bottom, #ecf1, #bdc3c7);
+}
+
+/* Primary Button */
+.primary-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Text Field Styling */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-text-fill: #2c3e50;
+    -fx-prompt-text-fill: #95a5a6;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db;
+}

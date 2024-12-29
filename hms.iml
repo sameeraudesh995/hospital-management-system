@@ -7,9 +7,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jfoenix-8.0.10" level="project" />
-    <orderEntry type="library" name="fontawesomefx-materialicons-2.2.0-9.1.2" level="project" />
+    <orderEntry type="library" exported="" name="javafx-swt" level="project" />
     <orderEntry type="library" name="fontawesomefx-8.9" level="project" />
+    <orderEntry type="library" name="fontawesomefx-materialicons-2.2.0-9.1.2" level="project" />
+    <orderEntry type="library" name="material-design-icons-iconfont-6.7.0" level="project" />
+    <orderEntry type="library" name="jfoenix-9.0.10" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.30" level="project" />
+    <orderEntry type="library" name="jBCrypt-0.4.1" level="project" />
   </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="147ea041-7425-4fd4-bdfc-a1e37d23ba86" />

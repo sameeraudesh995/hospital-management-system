@@ -50,7 +50,7 @@
                                 <RowConstraints minHeight="30" />
                             </rowConstraints>
                             <children>
-                                <Label style="-fx-text-fill: #22177A;" text="Patient ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label style="-fx-text-fill: #22177A;" text="Patient ID:" GridPane.columnIndex="0" GridPane.rowIndex="0"  />
                                 <TextField fx:id="patientIdField" promptText="Enter Patient ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                                 <Label style="-fx-text-fill: #22177A;" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                                 <TextField fx:id="nameField" promptText="Enter Full Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />

@@ -1,0 +1,141 @@
+/* General Styling for the Login Form */
+* {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.Label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Styling the VBox (form container) */
+.VBox {
+    -fx-padding: 30;
+    -fx-background-color: linear-gradient(to bottom right, #0d47a1, #00f5d4);
+    -fx-border-radius: 20;
+    -fx-alignment: center;
+}
+
+/* Label Styling */
+.Label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 0;
+}
+
+/* TextField and PasswordField Styling */
+.TextField, .PasswordField {
+    -fx-background-radius: 10;
+    -fx-border-color: #ddd;
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-pref-width: 250px;
+    -fx-font-weight: bold;
+}
+
+.TextField:focused, .PasswordField:focused {
+    -fx-border-color: #00f5d4;
+}
+
+/* Styling for the Buttons */
+.Button {
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+.Button:hover {
+    -fx-background-color: #2196F3;
+}
+
+.Button:pressed {
+    -fx-background-color: #1e88e5;
+}
+
+.Button:focused {
+    -fx-background-color: #0d47a1;
+}
+/* Login and Clear Buttons */
+.loginButton {
+    -fx-background-color: linear-gradient(to bottom, #333333, #1e88e5);
+}
+
+.clearButton {
+    -fx-background-color: linear-gradient(to bottom, #ffb703, #333333);
+}
+
+/* Hyperlink (Forgot Password) */
+.Hyperlink {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+}
+
+.Hyperlink:hover {
+    -fx-text-fill: #00f5d4;
+    -fx-underline: true;
+}
+
+/* VBox Spacing */
+.VBox > * {
+    -fx-spacing: 15px;
+}
+
+/* HBox for Buttons (Login and Clear) */
+.HBox {
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+}
+
+/* Focused effect for input fields */
+.TextField:focused, .PasswordField:focused {
+    -fx-border-color: #00f5d4;
+    -fx-effect: innershadow(gaussian, #00f5d4, 0.0, 0, 0, 0, 1, 1);
+}
+
+/* Styling for the BorderPane */
+.AnchorPane {
+    -fx-background-color: #0d47a1;
+    -fx-border-radius: 20;
+}
+
+/* Background for the Form */
+.AnchorPane > .VBox {
+    -fx-background-color: linear-gradient(to bottom right, #0d47a1, #00f5d4);
+    -fx-border-radius: 20;
+}
+
+/* Styling for Inputs and Labels in the Form */
+.TextField, .PasswordField {
+    -fx-background-radius: 10;
+    -fx-border-color: #dddddd;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.TextField:focused, .PasswordField:focused {
+    -fx-border-color: #00f5d4;
+    -fx-background-color: white;
+}
+/* Add background image to the form container */
+.AnchorPane {
+    -fx-background-image: url("image/"); /* Replace with the actual path to your image */
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-radius: 20;
+}
+
+/* Optional: Add a transparent overlay to darken the background image */
+.AnchorPane > .VBox {
+    -fx-background-color: rgba(0, 0, 0, 0.4); /* Transparent dark overlay */
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@../StyleSheets/PaymentManagemet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.cashier.PaymentManagementController">
+
+    <!-- Top Header Section -->
+    <top>
+        <HBox alignment="CENTER" spacing="20" styleClass="top-header">
+            <Label fx:id="greetingLabel" styleClass="greeting-label" text="Welcome, John Doe (Cashier)" />
+            <HBox alignment="CENTER_RIGHT" spacing="15">
+                <Label fx:id="dateTimeLabel" styleClass="datetime-label" />
+                <Button fx:id="logoutButton" styleClass="logout-button">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" size="20" />
+                    </graphic>
+                </Button>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox spacing="20" styleClass="main-container">
+            <!-- Page Title -->
+            <Label styleClass="page-title" text="Payment Management" />
+
+            <!-- Search and Client Details Section -->
+            <GridPane hgap="15" styleClass="input-grid" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="150" />
+                    <ColumnConstraints minWidth="250" />
+                    <ColumnConstraints minWidth="150" />
+                    <ColumnConstraints minWidth="250" />
+                </columnConstraints>
+
+                <!-- Search Rows -->
+                <Label text="Client ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <TextField fx:id="clientIdSearchField" promptText="Enter Client ID" HBox.hgrow="ALWAYS" />
+                    <Button styleClass="search-button" text="Search">
+                        <graphic>
+                            <FontAwesomeIconView glyphName="SEARCH" />
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <Label text="Patient ID:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <HBox spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                    <TextField fx:id="patientIdSearchField" promptText="Enter Patient ID" HBox.hgrow="ALWAYS" />
+                    <Button styleClass="search-button" text="Search">
+                        <graphic>
+                            <FontAwesomeIconView glyphName="SEARCH" />
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <!-- Payment Details -->
+                <Label text="Payment ID:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="paymentIdField" promptText="Payment ID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="nameField" editable="false" promptText="Patient Name" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="emailField" editable="false" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Phone:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <TextField fx:id="phoneField" editable="false" promptText="Phone Number" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                <Label text="Amount:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="amountField" promptText="Payment Amount" styleClass="highlight-amount" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Payment Date:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <DatePicker fx:id="paymentDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <Label text="Payment Method:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <ComboBox fx:id="paymentMethodComboBox" promptText="Select Method" style="-fx-background-color: linear-gradient(to right, #ffff, #2980b9);" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Cash" />
+                            <String fx:value="Card" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <Label text="Payment Status:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <ComboBox fx:id="paymentStatusComboBox" promptText="Select Status" style="-fx-background-color: linear-gradient(to right, #ffff, #2980b9);" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Paid" />
+                            <String fx:value="Unpaid" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <!-- Action Buttons -->
+                <HBox alignment="CENTER" spacing="15" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                    <Button fx:id="paidButton" styleClass="add-button" text="Paid" textFill="WHITE" />
+                    <Button fx:id="updateButton" styleClass="update-button" text="Update" />
+                    <Button fx:id="deleteButton" styleClass="delete-button" text="Delete" />
+                    <Button fx:id="clearButton" styleClass="clear-button" text="Clear" />
+                </HBox>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <!-- Payment Details Table -->
+            <TableView fx:id="paymentTable" styleClass="payment-table">
+                <columns>
+                    <TableColumn fx:id="paymentIdColumn" text="Payment ID" />
+                    <TableColumn fx:id="patientIdColumn" text="Patient ID" />
+                    <TableColumn fx:id="nameColumn" text="Name" />
+                    <TableColumn fx:id="amountColumn" text="Amount" />
+                    <TableColumn fx:id="emailColumn" text="Email" />
+                    <TableColumn fx:id="phoneColumn" text="Phone" />
+                    <TableColumn fx:id="statusColumn" text="Status" />
+                    <TableColumn fx:id="dateColumn" text="Date" />
+                </columns>
+            </TableView>
+
+            <!-- Bottom Action Buttons -->
+            <HBox alignment="CENTER" spacing="15" styleClass="bottom-actions">
+                <Button fx:id="invoiceButton" styleClass="invoice-button" text="Generate Invoice" textFill="WHITE">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="FILE_PDF_O" />
+                    </graphic>
+                </Button>
+                <Button fx:id="mailButton" styleClass="mail-button" text="Send Mail" textFill="WHITE">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="ENVELOPE" />
+                    </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
