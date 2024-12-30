@@ -8,8 +8,8 @@ import java.sql.SQLException;
 
 public class UserRegisterAccessCode {
 
-    public static boolean userRegister(User user) throws SQLException, ClassNotFoundException {
-        return CrudUtil.execute("ÏNSERT INTO user VALUES(?,?,?,?,?,?,?,?)",
+    public boolean userRegister(User user) throws SQLException, ClassNotFoundException {
+        return CrudUtil.execute("INSERT INTO user (user_id, emp_num, role, email, name, contact, password, join_date) VALUES(?,?,?,?,?,?,?,?)",
                 user.getUser_id(),
                 user.getEmp_num(),
                 user.getRole(),
