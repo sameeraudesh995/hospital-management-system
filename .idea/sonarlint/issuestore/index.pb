@@ -134,3 +134,17 @@ $src/com/itp/hms/db/DBConnection.java,7\4\741d49836d0e943a553e93172c581cb17c068
 Nsrc/com/itp/hms/db/databaseAccesscode/userRegister/UserRegisterAccessCode.java,d\3\d3e016b809054bbc6846e4d6ca02911b20ba27e4
 V
 &src/com/itp/hms/other/SetUIHandle.java,6\e\6e08e68ff644df32cc7852378403d7ddb54679ba
+n
+>src/com/itp/hms/controller/admin/user/AdminUserController.java,e\f\efcc5418f2be21651bf8f63d66e489be6c5d408c
+d
+4src/com/itp/hms/view/StyleSheets/doctorTreatment.css,e\b\eba7c90bc3fb15d660cc3c3cbd5b8229474668b0
+\
+,src/com/itp/hms/view/doctor/DoctorLogin.fxml,5\2\5282322ff0002d761f16477a088c0ababf1112b1
+l
+<src/com/itp/hms/controller/doctor/DoctorLoginController.java,5\7\57c88a80b22657383dc98256f684d24f1a4813c1
+{
+Ksrc/com/itp/hms/db/databaseAccesscode/loginAccessCode/DoctorAccessCode.java,c\f\cfef704fbd4f2ea3b0de0ec0d44414bcbfbd8e8d
+d
+4src/com/itp/hms/view/doctor/TreatmentManagement.fxml,e\1\e1d2c9c90057f1f3e0e8eb98f1fbae804149295b
+y
+Isrc/com/itp/hms/controller/doctor/DoctorTreatmentManagemetController.java,8\8\8863aea8b6d46a5042cdcc0cbf3025265d563b2b

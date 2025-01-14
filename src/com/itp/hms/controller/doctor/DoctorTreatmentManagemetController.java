@@ -18,26 +18,28 @@ import javafx.scene.layout.VBox;
         private Button logoutButton;
 
         @FXML
-        private TextField clientIdSearchField;
+        private TextField patientIdSearchField;
 
         @FXML
-        private TextField clientNameField;
+        private TextField patientNameFeild;
 
         @FXML
-        private TextField clientAddressField;
+        private TextField patientAddressField;
 
         @FXML
-        private TextField clientAgeField;
+        private TextField patientAgeField;
 
         @FXML
         private DatePicker treatmentDatePicker;
 
         @FXML
-        private Button updateClientButton;
+        private Button updatePatientButton;
 
         @FXML
-        private Button clearClientButton;
+        private Button clearPatientButton;
 
+        @FXML
+        private Button viewHistoryButton;
         @FXML
         private TextField medicineSearchField;
 
@@ -115,7 +117,7 @@ import javafx.scene.layout.VBox;
         @FXML
         private void onClientSearch() {
             // Handle client search logic
-            System.out.println("Search for client ID: " + clientIdSearchField.getText());
+            System.out.println("Search for client ID: " + patientIdSearchField.getText());
         }
 
         @FXML
@@ -127,9 +129,9 @@ import javafx.scene.layout.VBox;
         @FXML
         private void onClearClient() {
             // Handle clear client details
-            clientNameField.clear();
-            clientAddressField.clear();
-            clientAgeField.clear();
+            patientNameFeild.clear();
+            patientAddressField.clear();
+            patientAgeField.clear();
             treatmentDatePicker.setValue(null);
         }
 

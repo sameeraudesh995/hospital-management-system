@@ -44,7 +44,7 @@
                 <!-- Client Search Row -->
                 <Label styleClass="label" text="Client ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                    <TextField fx:id="clientIdSearchField" promptText="Enter Client ID" styleClass="text-field" HBox.hgrow="ALWAYS" />
+                    <TextField fx:id="patientIdSearchField" promptText="Enter patient ID" styleClass="text-field" HBox.hgrow="ALWAYS" />
                     <Button style="-fx-background-color: linear-gradient(to bottom, #2176ff, #33d6ff);" styleClass="search-button" text="Search">
                         <graphic>
                             <FontAwesomeIconView fill="#2980b9" glyphName="SEARCH" />
@@ -54,21 +54,21 @@
 
                 <!-- Client Details Rows -->
                 <Label styleClass="label" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <TextField fx:id="clientNameField" promptText="Client Name" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="patientNameFeild" promptText="Patient Name" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                 <Label styleClass="label" text="Address:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <TextField fx:id="clientAddressField" promptText="Client Address" styleClass="text-field" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <TextField fx:id="patientAddressField" promptText="Patient Address" styleClass="text-field" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
                 <Label styleClass="label" text="Age:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <TextField fx:id="clientAgeField" promptText="Client Age" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="patientAgeField" promptText="Patient Age" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                 <Label styleClass="label" text="Treatment Date:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                 <DatePicker fx:id="treatmentDatePicker" GridPane.columnIndex="3" GridPane.rowIndex="2" />
 
                 <!-- Client Details Action Buttons -->
                 <HBox spacing="10" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-                    <Button fx:id="updateClientButton" styleClass="update-button" text="Update" />
-                    <Button fx:id="clearClientButton" styleClass="clear-button" text="Clear" />
+                    <Button fx:id="updatePatientButton" styleClass="update-button" text="Update" />
+                    <Button fx:id="clearPatientButton" styleClass="clear-button" text="Clear" />
                     <Button fx:id="viewHistoryButton" onAction="#ViewHistoryOnAction" style="-fx-background-color: linear-gradient(to bottom, #72ddf7, #8093f1);" styleClass="" text="View History" />
                 </HBox>
                 <rowConstraints>

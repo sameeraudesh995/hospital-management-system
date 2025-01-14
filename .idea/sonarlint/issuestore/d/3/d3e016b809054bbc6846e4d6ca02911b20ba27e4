@@ -1,7 +1,5 @@
 
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÓúìÜ8¶çß¬¸2
-\
-java:S1118	":Add a private constructor to hide the implicit public one.(ªè»…øÿÿÿÿ8Ãçß¬¸2
 G
 java:S1481"+Remove this unused "lastid" local variable.(úŠ’88Ççß¬¸2
 S

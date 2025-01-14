@@ -159,6 +159,11 @@ public class MainFormController {
     }
 
     public void handleTreatmentOnAction(ActionEvent actionEvent) {
+        try {
+            set.setUi(context,"DoctorLogin","doctor");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
     public void handleAdmissionAction(ActionEvent actionEvent){
         try {

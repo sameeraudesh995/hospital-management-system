@@ -1,0 +1,20 @@
+
+g	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¨¯÷«Á2
+g	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¨¯÷«Á2
+g	java:S112Y"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»íú«Á2
+£
+java:S1186J"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(” õ§şÿÿÿÿ8Á¯÷«Á2
+o	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¶£Ìÿÿÿÿÿ8Å¯÷«Á2
+T
+java:S1172*"2Remove this unused method parameter "actionEvent".(¬¶£Ìÿÿÿÿÿ8Æ¯÷«Á2
+L	java:S106?"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8É¯÷«Á2
+o	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓëÂøÿÿÿÿ8É¯÷«Á2
+T
+java:S1172E"2Remove this unused method parameter "actionEvent".(ÓëÂøÿÿÿÿ8É¯÷«Á2
+o	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(” õ§şÿÿÿÿ8Ê¯÷«Á2
+j	java:S100M"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Øã½8Ê¯÷«Á2
+O
+java:S1172M"2Remove this unused method parameter "actionEvent".(Øã½8Ê¯÷«Á2
+o	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼îæØıÿÿÿÿ8Ì¯÷«Á2
+T
+java:S1172U"2Remove this unused method parameter "actionEvent".(¼îæØıÿÿÿÿ8Í¯÷«Á2
