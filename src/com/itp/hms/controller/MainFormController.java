@@ -167,7 +167,7 @@ public class MainFormController {
     }
     public void handleAdmissionAction(ActionEvent actionEvent){
         try {
-            set.setUi(context,"AdmissionForm","admission");
+            set.setUi(context,"AdmissionLogin","admission");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

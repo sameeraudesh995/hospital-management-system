@@ -32,13 +32,13 @@
 
             <!-- Login and Clear Buttons -->
             <HBox alignment="CENTER" spacing="10">
-                <Button fx:id="loginButton" styleClass="button, primary-button" text="Login" />
-                <Button fx:id="clearButton" styleClass="button, secondary-button" text="Clear" />
+                <Button fx:id="loginButton" onAction="#handleLogin" styleClass="button, primary-button" text="Login" />
+                <Button fx:id="clearButton" onAction="#handleClear" styleClass="button, secondary-button" text="Clear" />
             </HBox>
 
             <!-- Forgot Password Hyperlink -->
-            <Hyperlink fx:id="forgotPasswordLink" styleClass="hyperlink" text="Forgot password?" />
-            <Hyperlink fx:id="forgotPasswordLink" styleClass="hyperlink" text="Back to Home" />
+            <Hyperlink fx:id="forgotPasswordLink" onAction="#handleForgotPassword" styleClass="hyperlink" text="Forgot password?" />
+            <Hyperlink fx:id="forgotPasswordLink" onAction="#handleBackToHome" styleClass="hyperlink" text="Back to Home" />
         </VBox>
     </center>
 </BorderPane>
