@@ -1,9 +1,13 @@
 package com.itp.hms.controller.admin.consultan;
+import com.itp.hms.db.databaseAccesscode.admin.ConsultantRegisterAccessCode;
+import com.itp.hms.db.databaseAccesscode.userRegister.UserRegisterAccessCode;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
+import java.sql.SQLException;
 
 public class ConsultanRegisterFormController {
 
@@ -35,36 +39,36 @@ public class ConsultanRegisterFormController {
         private ComboBox<String> specialAreaComboBox;
 
         @FXML
-        private TableView<Consultant> consultantTable;
+        private TableView consultantTable;
 
         @FXML
-        private TableColumn<Consultant, String> idColumn;
+        private TableColumn idColumn;
 
         @FXML
-        private TableColumn<Consultant, String> nameColumn;
+        private TableColumn nameColumn;
 
         @FXML
-        private TableColumn<Consultant, String> empNumColumn;
+        private TableColumn empNumColumn;
 
         @FXML
-        private TableColumn<Consultant, String> passwordColumn;
+        private TableColumn passwordColumn;
 
         @FXML
-        private TableColumn<Consultant, String> contactColumn;
+        private TableColumn contactColumn;
 
         @FXML
-        private TableColumn<Consultant, String> emailColumn;
+        private TableColumn emailColumn;
 
         @FXML
-        private TableColumn<Consultant, String> salaryColumn;
+        private TableColumn salaryColumn;
 
         @FXML
-        private TableColumn<Consultant, String> joinDateColumn;
+        private TableColumn joinDateColumn;
 
         @FXML
-        private TableColumn<Consultant, String> specialAreaColumn;
+        private TableColumn specialAreaColumn;
 
-        private final ObservableList<Consultant> consultantList = FXCollections.observableArrayList();
+        private final ObservableList consultantList = FXCollections.observableArrayList();
 
         public void initialize() {
             specialAreaComboBox.setItems(FXCollections.observableArrayList(
@@ -131,9 +135,34 @@ public class ConsultanRegisterFormController {
 
 
 
-    public static class Consultant {
-            // Consultant model class with necessary properties and methods.
+    private String generateNextUserId() throws SQLException, ClassNotFoundException {
+        String lastConstId = getLastUserId();
+
+        if (lastConstId == null || lastConstId.isEmpty()) {
+            return "UR001";
         }
+
+
+        int numericPart = Integer.parseInt(lastConstId.substring(2));
+        numericPart++;
+
+
+        return String.format("UR%03d", numericPart);
+    }
+    private String getLastUserId() throws SQLException, ClassNotFoundException {
+        String lastId = ConsultantRegisterAccessCode.getLastId();
+
+        if (lastId==null){
+            return null;
+        }
+        return lastId;
+    }
+    @FXML
+    private void autoGenerateUserId() throws SQLException, ClassNotFoundException {
+        String newUserId = generateNextUserId();
+        consultantIdField.setText(newUserId);
+        consultantIdField.setEditable(false);
+    }
     }
 
 

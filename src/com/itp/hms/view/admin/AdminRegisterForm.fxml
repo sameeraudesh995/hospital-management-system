@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@../StyleSheets/AdminRegister.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admin.AdminRegisterFormController">
+<BorderPane prefHeight="500.0" prefWidth="600.0" styleClass="root" stylesheets="@../StyleSheets/AdminRegister.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admin.AdminRegisterFormController">
 
-    <children>
-        <ImageView fitHeight="630.0" fitWidth="602.0" layoutY="7.0" pickOnBounds="true">
+    <center>
+        <VBox alignment="CENTER" prefHeight="543.0" prefWidth="300.0" spacing="20.0" styleClass="form-container">
+         <ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../Images/Dna.png" />
+               <Image url="@../../Images/admin.png" />
             </image>
-        </ImageView>
-
-        <VBox alignment="CENTER" layoutX="170.0" layoutY="50.0" prefHeight="543.0" prefWidth="300.0" spacing="20.0" styleClass="form-container">
-            <Label styleClass="header-label" text="Admin Registration" />
+         </ImageView>
+            <Label style="-fx-font-size: 30px;" styleClass="header-label" text="Admin Registration">
+            <font>
+               <Font name="Britannic Bold" size="30.0" />
+            </font></Label>
 
             <VBox spacing="15.0">
                 <!-- Admin ID -->
@@ -44,21 +47,25 @@
                 <Label styleClass="label" text="Email" />
                 <TextField fx:id="emailField" promptText="Enter Email" styleClass="text-field" />
 
-                <HBox alignment="CENTER" prefHeight="64.0" prefWidth="300.0">
+                <HBox alignment="CENTER" spacing="15.0">
                     <children>
-                        <ButtonBar prefHeight="64.0" prefWidth="298.0">
-                            <buttons>
-                                <!-- Submit Button -->
-                                <Button fx:id="registerButton" onAction="#handleRegisterButtonAction" style="-fx-background-color: linear-gradient(to bottom, #4CAF50, #333333);" styleClass="button primary-button" text="Register" />
+                        <!-- Submit Button -->
+                        <Button fx:id="registerButton" onAction="#handleRegisterButtonAction" style="-fx-background-color: linear-gradient(to bottom, #009432,#006266);" styleClass="button register-btn" text="Register" />
 
-                                <!-- Clear Button -->
-                                <Button fx:id="registerButton1" onAction="#handleRegisterButtonAction" style="-fx-background-color: linear-gradient(to bottom,#ff9e00, #333333);" styleClass="button secondary-button" text="Clear" />
-                            </buttons>
-                        </ButtonBar>
+                        <!-- Clear Button -->
+                        <Button fx:id="clearButton" onAction="#handleClearButtonAction" style="-fx-background-color: linear-gradient(to bottom, #FF9800, #EE5A24);" styleClass="button clear-btn" text="Clear" />
+
+
                     </children>
-                </HBox>
-            </VBox>
-        </VBox>
-    </children>
 
-</AnchorPane>
+                </HBox>
+               
+            </VBox>
+         <Hyperlink onAction="#backToHomeOnAction" prefHeight="24.0" prefWidth="95.0" style="-fx-text-fill: linear-gradient(to bottom, #009432,#006266);" text="Back To Home">
+            <font>
+               <Font size="19.0" />
+            </font>
+         </Hyperlink>
+        </VBox>
+    </center>
+</BorderPane>
