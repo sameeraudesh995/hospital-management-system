@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="context" prefHeight="700.0" prefWidth="900.0" styleClass="root" stylesheets="@../../StyleSheets/consultan/ConsultantRegister.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itp.hms.controller.admin.consultan.ConsultanRegisterFormController">
+
+    <center>
+        <GridPane alignment="CENTER" hgap="15" styleClass="form-container" vgap="15">
+
+            <children>
+                <Label styleClass="header" text="Consultant Registration" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+
+                <Label styleClass="label" text="Consultant ID:" GridPane.rowIndex="1" />
+                <TextField fx:id="consultantIdField" promptText="Enter Consultant ID" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label styleClass="label" text="Name:" GridPane.rowIndex="2" />
+                <TextField fx:id="nameField" promptText="Enter Full Name" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label styleClass="label" text="Employee Number:" GridPane.rowIndex="3" />
+                <TextField fx:id="empNumField" promptText="Enter Employee Number" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label styleClass="label" text="Password:" GridPane.rowIndex="4" />
+                <PasswordField fx:id="passwordField" promptText="Enter Password" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label styleClass="label" text="Contact:" GridPane.rowIndex="5" />
+                <TextField fx:id="contactField" promptText="Enter Contact Number" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label styleClass="label" text="Email:" GridPane.rowIndex="6" />
+                <TextField fx:id="emailField" promptText="Enter Email Address" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                <Label styleClass="label" text="Salary:" GridPane.rowIndex="7" />
+                <TextField fx:id="salaryField" promptText="Enter Salary" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+                <Label styleClass="label" text="Join Date:" GridPane.rowIndex="8" />
+                <DatePicker fx:id="joinDatePicker" styleClass="date-picker" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                <Label styleClass="label" text="Special Area:" GridPane.rowIndex="9" />
+                <ComboBox fx:id="specialAreaComboBox" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Cardiology" />
+                            <String fx:value="Neurology" />
+                            <String fx:value="Pediatrics" />
+                            <String fx:value="Orthopedics" />
+                            <String fx:value="Dermatology" />
+                            <String fx:value="Radiology" />
+                            <String fx:value="General Medicine" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <HBox alignment="CENTER" spacing="15" GridPane.columnSpan="2" GridPane.rowIndex="10">
+                    <children>
+                        <Button onAction="#handleRegister" styleClass="button, primary-button" text="Register" />
+                        <Button onAction="#handleClear" styleClass="button, secondary-button" text="Clear" />
+                        <Button onAction="#handleSendEmail" styleClass="button, send-button" text="Send Email" />
+                        <Button onAction="#updateOnActio" styleClass="button, update-button" text="Update" />
+                        <Button onAction="#deleteOnAction" styleClass="button, delete-button" text="Delete" />
+                    </children>
+                </HBox>
+
+                <TableView fx:id="consultantTable" GridPane.columnSpan="2" GridPane.rowIndex="11">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID" />
+                        <TableColumn fx:id="nameColumn" text="Name" />
+                        <TableColumn fx:id="empNumColumn" text="Employee Number" />
+                        <TableColumn fx:id="passwordColumn" text="Password" />
+                        <TableColumn fx:id="contactColumn" text="Contact" />
+                        <TableColumn fx:id="emailColumn" text="Email" />
+                        <TableColumn fx:id="salaryColumn" text="Salary" />
+                        <TableColumn fx:id="joinDateColumn" text="Join Date" />
+                        <TableColumn fx:id="specialAreaColumn" text="Special Area" />
+                    </columns>
+                </TableView>
+            </children>
+
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </center>
+</BorderPane>
